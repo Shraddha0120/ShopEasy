@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ShopEasy - Customer Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Welcome to ShopEasy!</h1>
+
+        <h2>Hello, {{ user_name }}!</h2>
+
+        <p>Welcome to your customer dashboard.</p>
+
+        <h3>Your Account</h3>
+
+        <p>You are successfully logged in.</p>
+
+        <a href="/logout">Logout</a>
+
+    </div>
+
+</body>
+</html>

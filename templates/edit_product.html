@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ShopEasy - Edit Product</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Edit Product</h1>
+
+        <form method="POST">
+
+            <label>Product Name:</label>
+            <input type="text" name="name" value="{{ product.name }}" required>
+
+            <label>Description:</label>
+            <textarea name="description">{{ product.description or '' }}</textarea>
+
+            <label>Price:</label>
+            <input type="number" name="price" step="0.01" min="0" value="{{ product.price }}" required>
+
+            <label>Stock:</label>
+            <input type="number" name="stock" min="0" value="{{ product.stock }}" required>
+
+            <label>Category:</label>
+            <input type="text" name="category" value="{{ product.category or '' }}">
+
+            <button type="submit">Update Product</button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>

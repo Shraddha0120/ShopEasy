@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ShopEasy - Online Shopping</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <h1>ShopEasy</h1>
+        <div>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('products') }}">Products</a>
+            <a href="{{ url_for('view_cart') }}">Cart 🛒</a>
+            <a href="{{ url_for('order_history') }}">My Orders</a>
+            <a href="{{ url_for('dashboard') }}">Dashboard</a>
+            <a href="{{ url_for('admin_dashboard') }}">Admin</a>
+            <a href="{{ url_for('login') }}">Login</a>
+            <a href="{{ url_for('logout') }}">Logout</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h2>Welcome to ShopEasy!</h2>
+        <p>Discover amazing products at great prices.</p>
+
+        <a href="{{ url_for('register') }}">Create Account</a>
+        <a href="{{ url_for('login') }}">Customer Login</a>
+        <button onclick="window.location.href='{{ url_for('products') }}'">
+            Shop Now
+        </button>
+    </section>
+
+    <section class="categories">
+        <h2>Shop by Categories</h2>
+
+        <div class="category-container">
+            <div class="category">Electronics</div>
+            <div class="category">Clothing</div>
+            <div class="category">Accessories</div>
+            <div class="category">Home Appliances</div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 ShopEasy. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

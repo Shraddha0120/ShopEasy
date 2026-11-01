@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ShopEasy - Add Product</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Add New Product</h1>
+
+        <form method="POST">
+
+            <label>Product Name:</label>
+            <input type="text" name="name" required>
+
+            <label>Description:</label>
+            <textarea name="description"></textarea>
+
+            <label>Price:</label>
+            <input type="number" name="price" step="0.01" min="0" required>
+
+            <label>Stock:</label>
+            <input type="number" name="stock" min="0" value="0" required>
+
+            <label>Category:</label>
+            <input type="text" name="category">
+
+            <button type="submit">Add Product</button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>

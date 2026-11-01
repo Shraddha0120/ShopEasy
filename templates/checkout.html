@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ShopEasy - Checkout</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>Checkout</h1>
+
+    {% for item in cart_items %}
+        <p>{{ item.product.name }} - {{ item.quantity }} × ₹{{ item.product.price }}</p>
+    {% endfor %}
+
+    <h2>Total: ₹{{ total_amount }}</h2>
+
+    <form method="POST">
+        <label>Delivery Address:</label>
+        <textarea name="address" required></textarea>
+        <button type="submit">Place Order</button>
+    </form>
+</div>
+</body>
+</html>
